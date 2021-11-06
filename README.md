@@ -1,6 +1,6 @@
 
 
-## Usage: index [options]
+## Usage: pvs [options]
 ```
 Options:
   -s, --strategy <monthYear|dayMonthYear|year>  the strategy for sorting files into folder (default: "monthYear")
@@ -12,7 +12,7 @@ Options:
 
 ## Examples
 ```
-ivs -s dayMonthYear -sf /Users/..../Photos -df /Valumes/Photos -t image
+pvs -s dayMonthYear -sf /Users/..../Photos -df /Valumes/Photos -t image
 
-ivs -s dayMonthYear -sf /Users/..../Videos -df /Valumes/Videos -t video
+pvs -s dayMonthYear -sf /Users/..../Videos -df /Valumes/Videos -t video
 ```
