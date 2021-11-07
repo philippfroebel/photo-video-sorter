@@ -3,7 +3,7 @@ import * as fs from "fs";
 import PathNotExistsException from "../exception/PathNotExistsException";
 import logger, { LOGGER_PREFIX } from "../utils/Logger";
 import * as FileType from "file-type";
-import { isValidDateString } from "../utils/Helpers";
+import { fixExifDateString, isValidDateString } from "../utils/Helpers";
 import * as exiftool from "exiftool";
 import * as path from "path";
 import * as cliProgress from "cli-progress";
@@ -197,48 +197,28 @@ export default abstract class AbstractStrategy {
                     if (
                         metadata.createDate &&
                         isValidDateString(
-                            metadata.createDate
-                                .split(" ")[0]
-                                .split(":")
-                                .splice(0, 3)
-                                .join("-"),
+                            fixExifDateString(metadata.createDate),
                         )
                     ) {
-                        dateTimeString = metadata.createDate
-                            .split(" ")[0]
-                            .split(":")
-                            .splice(0, 3)
-                            .join("-");
+                        dateTimeString = fixExifDateString(metadata.createDate);
                     } else if (
                         metadata.profileDateTime &&
                         isValidDateString(
-                            metadata.profileDateTime
-                                .split(" ")[0]
-                                .split(":")
-                                .splice(0, 3)
-                                .join("-"),
+                            fixExifDateString(metadata.profileDateTime),
                         )
                     ) {
-                        dateTimeString = metadata.profileDateTime
-                            .split(" ")[0]
-                            .split(":")
-                            .splice(0, 3)
-                            .join("-");
+                        dateTimeString = fixExifDateString(
+                            metadata.profileDateTime,
+                        );
                     } else if (
                         metadata["date/timeOriginal"] &&
                         isValidDateString(
-                            metadata["date/timeOriginal"]
-                                .split(" ")[0]
-                                .split(":")
-                                .splice(0, 3)
-                                .join("-"),
+                            fixExifDateString(metadata["date/timeOriginal"]),
                         )
                     ) {
-                        dateTimeString = metadata["date/timeOriginal"]
-                            .split(" ")[0]
-                            .split(":")
-                            .splice(0, 3)
-                            .join("-");
+                        dateTimeString = fixExifDateString(
+                            metadata["date/timeOriginal"],
+                        );
                     } else {
                         dateTimeString = fs
                             .statSync(sourceFile)
