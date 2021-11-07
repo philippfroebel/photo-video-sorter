@@ -1,4 +1,4 @@
-import logger, { LOGGER_PREFIX } from "../src/utils/Logger";
+import logger, { LOGGER_PREFIX } from "../../src/utils/Logger";
 
 describe("test Logger", () => {
     it("should be the LOGGER_PREFIX", () => {

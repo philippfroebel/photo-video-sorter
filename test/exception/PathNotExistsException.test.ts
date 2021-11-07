@@ -1,4 +1,4 @@
-import PathNotExistsException from "../src/exception/PathNotExistsException";
+import PathNotExistsException from "../../src/exception/PathNotExistsException";
 
 describe("test path not exists exception", () => {
     it("should throw PathNotExistsException", () => {

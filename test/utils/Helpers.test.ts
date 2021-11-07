@@ -1,4 +1,4 @@
-import { isValidDateString } from "../src/utils/Helpers";
+import { isValidDateString } from "../../src/utils/Helpers";
 
 describe("test isValidDateString helper", () => {
     it("should be a valid date string", () => {
