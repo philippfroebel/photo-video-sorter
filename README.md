@@ -45,16 +45,16 @@ Options:
 
 ## Examples global
 ```
-pvs -s dayMonthYear -sf /Users/..../Photos -df /Valumes/Photos -t image
+pvs -s dayMonthYear -sf /Users/..../Photos -df /Volumes/Photos -t image
 
-pvs -s dayMonthYear -sf /Users/..../Videos -df /Valumes/Videos -t video
+pvs -s dayMonthYear -sf /Users/..../Videos -df /Volumes/Videos -t video
 ```
 
 ## Examples local
 ```
-npx pvs -s dayMonthYear -sf /Users/..../Photos -df /Valumes/Photos -t image
+npx pvs -s dayMonthYear -sf /Users/..../Photos -df /Volumes/Photos -t image
 
-npx pvs -s dayMonthYear -sf /Users/..../Videos -df /Valumes/Videos -t video
+npx pvs -s dayMonthYear -sf /Users/..../Videos -df /Volumes/Videos -t video
 ```
 
 # Development 
