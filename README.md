@@ -1,6 +1,6 @@
 the photo-video-sorter is a small cli tool to sort photos or videos by exif date or ctime as fallback into a folder structure. 
 
-e.g. a file with date 2021-12-24 will be moved into this folder structure by default
+e.g. a file with date 2021-12-24 will be moved into this folder structure by default strategy **monthYear**
 ```
 {destinationFolder}/2021/12/
 ```
