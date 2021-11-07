@@ -3,13 +3,22 @@
   "version": "0.0.2",
   "description": "a command line tool for sorting photos and videos by exif date or ctime as fallback",
   "homepage": "https://github.com/philippfroebel/photo-video-sorter",
-  "keywords": ["photo", "video", "sort", "sorting", "date", "exif", "directory", "structure"],
+  "keywords": [
+    "photo",
+    "video",
+    "sort",
+    "sorting",
+    "date",
+    "exif",
+    "directory",
+    "structure"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/philippfroebel/photo-video-sorter.git"
   },
   "bugs": {
-    "url" : "https://github.com/philippfroebel/photo-video-sorter/issues"
+    "url": "https://github.com/philippfroebel/photo-video-sorter/issues"
   },
   "main": "dist/index.js",
   "files": [
@@ -19,7 +28,8 @@
     "build": "tsc",
     "serve": "tsc-watch src/index.ts --outDir ./dist --onFailure 'echo Beep! Compilation Failed' --compiler typescript/bin/tsc",
     "lint": "eslint . --ext .ts --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "bin": {
     "pvs": "dist/index.js"
@@ -37,6 +47,8 @@
     "eslint": "^8.2.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6",
     "prettier": "^2.4.1",
     "tsc-watch": "^4.5.0",
     "typescript": "^4.4.4"
@@ -52,5 +64,8 @@
   },
   "engines": {
     "node": ">=v12.22.3"
+  },
+  "lint-staged": {
+    "*.ts": "npm run lint"
   }
 }
