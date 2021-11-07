@@ -1,9 +1,20 @@
 {
   "name": "photo-video-sorter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a command line tool for sorting photos and videos by exif date or ctime as fallback",
+  "homepage": "https://github.com/philippfroebel/photo-video-sorter",
+  "keywords": ["photo", "video", "sort", "sorting", "date", "exif", "directory", "structure"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philippfroebel/photo-video-sorter.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/philippfroebel/photo-video-sorter/issues"
+  },
   "main": "dist/index.js",
-  "files": "dist/",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "build": "tsc",
     "serve": "tsc-watch src/index.ts --outDir ./dist --onFailure 'echo Beep! Compilation Failed' --compiler typescript/bin/tsc",
