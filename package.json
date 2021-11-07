@@ -1,6 +1,6 @@
 {
   "name": "photo-video-sorter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a command line tool for sorting photos and videos by exif date or ctime as fallback",
   "homepage": "https://github.com/philippfroebel/photo-video-sorter",
   "keywords": [
