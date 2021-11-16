@@ -15,8 +15,8 @@ so we need the exiftool package for your system
 
 on macOS
 ```
-sudo brew update
-sudo brew install exiftool
+brew update
+brew install exiftool
 ```
 [https://exiftool.org/install.html](https://exiftool.org/install.html)
 
